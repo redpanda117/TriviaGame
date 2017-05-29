@@ -1,0 +1,38 @@
+body{
+	background-image: url(../images/LOL.jpg);
+	background-size:cover;
+}
+panel-title{
+	font-size: 100px;
+}
+#front{
+	height: 200px;
+	width: 500px;
+	display: block;
+    margin: 0 auto;
+}
+#trivia{
+	font-family: 'Cinzel', serif;
+	font-size: 40px;
+}
+#wrong,
+#right,
+#noAnswer{
+	height:300px;
+	width: 300px;
+	display: block;
+    margin: 0 auto;
+}
+.btn{
+	height:50px;
+	width: 200px;
+}
+.bt{
+	height:35px;
+	width: 400px;
+	margin: 20px;
+	color: #000000;
+}
+.panel-default{
+	margin-top: 90px;
+}
