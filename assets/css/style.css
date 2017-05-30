@@ -2,8 +2,14 @@ body{
 	background-image: url(../images/LOL.jpg);
 	background-size:cover;
 }
-panel-title{
-	font-size: 100px;
+
+button{
+	height:35px;
+	width: 50%;
+	margin: 20px;
+	color: #000000;
+	border-radius: 5px;
+
 }
 #front{
 	height: 200px;
@@ -26,13 +32,12 @@ panel-title{
 .btn{
 	height:50px;
 	width: 200px;
+	font-size: 25px;
 }
-.bt{
-	height:35px;
-	width: 400px;
-	margin: 20px;
-	color: #000000;
-}
+
 .panel-default{
 	margin-top: 90px;
+}
+.panel{	
+    background-color: rgba(15,17,19,.85);
 }

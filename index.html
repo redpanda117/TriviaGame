@@ -6,16 +6,16 @@
 	<title>Trivia Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/slate/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel:900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
 </head>
 <body>
 	<div class="container">
 	<div class="col-md-2"></div>
-	<div class="col-md-8">
-		<div class="text-center">
+	<div class="col-md-8 text-center">
 			<div class="panel panel-default">
 			<div class="panel-heading">
-			<h1 class="panel-title">Trivia Game</h1>
+			<h1 class="panel-title">League of Legends Trivia</h1>
 			</div>
 				<div class="panel-body">
 				<img src="assets/images/logo.png" id="front" class="img-responsive">
@@ -31,15 +31,16 @@
 	                        	<img id = "right" src="assets/images/correct.png" class="img-responsive">
 	                        	<img id = "noAnswer" src="assets/images/noAnswer.jpg" class="img-responsive">
 								<div id="choices">
-									<button id="choice0" class="bt"></button>   
-									<button id="choice1" class="bt"></button>
-									<button id="choice2" class="bt"></button>
-									<button id="choice3" class="bt"></button>
+									<button type="button"  id="choice0" class="bt"></button>   
+									<button type="button"  id="choice1" class="bt"></button>
+									<button type="button"  id="choice2" class="bt"></button>
+									<button type="button"  id="choice3" class="bt"></button>
 								</div>	
-					</div>
+					<button type="button" class="btn btn-warning" id="restart">Play Again</button>			
+					
 				</div>
 			</div>
-		</div>	
+			
 	</div>	
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>

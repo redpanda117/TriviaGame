@@ -6,7 +6,7 @@ var wrong = 0;
 var unanswer= 0;
 var trivia = [
 	"Which one of these champions uses poison?",
-	"Which one of these champion is part of the support role?"
+	"Which one of these champion is consider a support?"
 ];
 var choices = [
 	["A. Leona", "B. Ashe", "C. Katarian","D. Cassiopeia"],
@@ -16,29 +16,54 @@ var answer = [
 	"D. Cassiopeia", "B. Sona"
 ];
 
-//hides everthing that is not needed at the moment
+
 //first page
 function firstPage(){
+//hides everthing that is not needed at the time
 	$("#question").hide();
 	$("#choices").hide();
 	$("#show-number").hide();
 	$("#wrong").hide();
 	$("#right").hide();
 	$("#noAnswer").hide();
+	$("#restart").hide();
 //show trivia
 	$("#trivia").html("Let's start the Trivia");
 }
 //calling on the function firstPage
 firstPage();
 
+//restarting variables
+function resetting(){
+//go back to first question
+currentQuestion = 0;
+//zero out the score
+correct = 0;
+wrong = 0;
+unanswer = 0;
+}
+
 //The start button
-$("#start").on('click',function(){
+$("#start").on('click',function(){	
 //display the first question
 Question();
 //check if button works
 console.log("Start");
 });
 
+//restart button
+$("#restart").on('click',function(){
+//hide the score board after restarting the round
+	$("#finish").hide();
+	$("#unAnswer").hide();
+	$("#lost").hide();
+	$("#win").hide();
+resetting();
+//display the first question
+Question();
+//check if button works
+console.log("PLAY AGAIN");
+});
 
 //dispay question
 function Question(){
@@ -49,6 +74,7 @@ function Question(){
 	$("#noAnswer").hide();
 	$("#trivia").hide();
 	$("#front").hide();
+	$("#restart").hide();
 //condition to see are there any questions left
 	if(trivia.length > currentQuestion){
 //Start the timer
@@ -67,23 +93,34 @@ function Question(){
 		$("#choice2").html(choices[currentQuestion][2]);
 		$("#choice3").html(choices[currentQuestion][3]);
 		}
-//keeping track of question
-
 //if there is no more question go to scoreboard	
 	else{
 		clearInterval(counter);
-//hide all text and things from view
+//hide all text and things from view that are not needed
 		$("#question").hide();
 		$("#choices").hide();
 		$("#show-number").hide();
 		$("#wrong").hide();
 		$("#right").hide();
 		$("#noAnswer").hide();
+//the score board to show at the end when going through the game more than once
+		$("#finish").show();
+		$("#win").show();
+		$("#lost").show();
+		$("#unAnswer").show();
 //add text to the id finish
 		$("#finish").html("Your final Score");
-
-		
-	}	
+//show the amount of correct questions you got
+		$("#win").html("Correct: " + correct);
+//shows the amount of wrong questions you got 		
+		$("#lost").html("Wrong: " + wrong);
+//shows the amount of unanswered questions		
+		$("#unAnswer").html("Unanswered questions: " + unanswer);	
+//restart button is show 
+		$("#restart").show();	
+	
+	}
+//is it working	
 console.log("Game is working");	
 }
 
@@ -96,7 +133,7 @@ $(".bt").on("click",function() {
 //timer hidden
 	$("#show-number").hide()
 //If what player pick is correct
-if(userPick == answer[currentQuestion]){
+if(userPick === answer[currentQuestion]){
 //add one point to correct
 		correct++;
 //correct answer imgage shows
@@ -115,7 +152,7 @@ if(userPick == answer[currentQuestion]){
 //write the word wrong to show on html
 		$("#question").html("<h3>" + "Wrong" + "</h3>")
 //under the question id attach what was the correct answer 
-		$("#question").append("<p>" +"The correct answer is " +answer[currentQuestion] + "</p>")
+		$("#question").append("<p>" +"The correct answer was " +answer[currentQuestion] + "</p>")
 		 clearInterval(counter);
 	}
 //next question
@@ -131,17 +168,17 @@ console.log("You have " + wrong + " wrong answers.");
 
 // this function is for the count down timer for questions
 function run() {
-	clockRunning = true;
-	var number = 45;
-
+/*the time keeps dislaying one sec less than the number claim to be 
+so to have 45 seconds to display it has to be 45 + 1 = 46 seconds.*/
+	var number = 46;
+//set an interval that runs the decrement once a second.
       counter = setInterval(decrement, 1000);
-    
 //  The decrement function.
     function decrement() {
 //  Decrease number by one.
       number--;
 //  Show the number in the #show-number tag.
-      $("#show-number").html("<h2>" + number + "</h2>");
+      $("#show-number").html("<h2>" + "Time Remaining:  " + number + "</h2>");
 //  Once timer hits zero...
       if (number === 0) {
 //  ...run the stop function.
@@ -156,8 +193,6 @@ console.log("Tick Tock");
     function stop() {	
 //add one point to Unanswer
     unanswer++;
-//next question
-		currentQuestion++;
 //hide multiple choice
     $("#choices").hide();
 //hide timer
@@ -167,27 +202,20 @@ console.log("Tick Tock");
 //text for when no answer is picked
 	$("#question").show();
 	$("#question").html("<h3>" + "Times Up"+ "</h3>")
-	$("#question").append("<p>" +"The correct answer is " +answer[currentQuestion] + "</p>")
-//  Clears our intervalId
-//  to the clearInterval function.
+	$("#question").append("<p>" +"The correct answer was " +answer[currentQuestion] + "</p>")
+// clearInterval function. It will stop the setInterval function
     clearInterval(counter);
 //debugging
 console.log("You have " + unanswer + " questions.");	
+//next question
+	currentQuestion++;
 //next question in 5 seconds
     setTimeout(function(){
         Question();
         }, 5000);  
 
     }
-
-
-
-
-
-
-
-
-
+  
 
 
 }); 
