@@ -6,14 +6,26 @@ var wrong = 0;
 var unanswer= 0;
 var trivia = [
 	"Which one of these champions uses poison?",
-	"Which one of these champion is consider a support?"
+	"Which one of these champion is consider a support?",
+	"Which one of these champions says this line in the game Yep that tasted purple?",
+	"Which one of these items in game makes you invulnerable for a certain amount of time? Hint: It makes you look like a golden statue.",
+	"Which one of these champions excluding items can not get or give a second chance when you die, whether it is a passive or is a champions ability?",
+	"Which one of these champions have an ability call Jack in the Box?",
+	"Which one of these is not a position or role in the game?",
+	"Which one of these is a champion that you can pick to play in the game?"
 ];
 var choices = [
 	["A. Leona", "B. Ashe", "C. Katarian","D. Cassiopeia"],
-	["A. Teemo","B. Sona","C. Ezreal","D. Draven"]
+	["A. Teemo","B. Sona","C. Ezreal","D. Draven"],
+	["A. Lulu", "B. Anivia", "C. Camille", "D. Vi"],
+	["A. Long Sword", "B. Last Whisper", "C. Zhonyas Hourglass", "D. Hexdrinker"],
+	["A. Aatrox", "B. Sejuani", "C. Zac", "D. Zilean"],
+	["A. Syndra", "B. Kog'maw", "C. Singed", "D. Shaco"],
+	["A. Point Guard", "B. Mid", "C. Jungle", "D. ADC" ],
+	["A. Bloodseeker", "B. Riven", "C. Pugn", "D. Tidehunter"]
 ];
 var answer = [
-	"D. Cassiopeia", "B. Sona"
+	"D. Cassiopeia", "B. Sona", "A. Lulu", "C. Zhonyas Hourglass", "B. Sejuani", "D. Shaco", "A. Point Guard", "B. Riven"
 ];
 
 
