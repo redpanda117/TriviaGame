@@ -10,9 +10,11 @@ var trivia = [
 	"Which one of these champions says this line in the game Yep that tasted purple?",
 	"Which one of these items in game makes you invulnerable for a certain amount of time? Hint: It makes you look like a golden statue.",
 	"Which one of these champions excluding items can not get or give a second chance when you die, whether it is a passive or is a champions ability?",
-	"Which one of these champions have an ability call Jack in the Box?",
+	"Which one of these champions has an ability call Jack in the Box?",
 	"Which one of these is not a position or role in the game?",
-	"Which one of these is a champion that you can pick to play in the game?"
+	"Which one of these is a champion that you can pick to play in the game?",
+	"Which summoner spell is top priority for a jungler to have in game?",
+	"You win the game when you?"
 ];
 var choices = [
 	["A. Leona", "B. Ashe", "C. Katarian","D. Cassiopeia"],
@@ -22,10 +24,12 @@ var choices = [
 	["A. Aatrox", "B. Sejuani", "C. Zac", "D. Zilean"],
 	["A. Syndra", "B. Kog'maw", "C. Singed", "D. Shaco"],
 	["A. Point Guard", "B. Mid", "C. Jungle", "D. ADC" ],
-	["A. Bloodseeker", "B. Riven", "C. Pugn", "D. Tidehunter"]
+	["A. Bloodseeker", "B. Riven", "C. Pugn", "D. Tidehunter"],
+	["A. Smite", "B. Cleanse", "C. Clarity", "D. Heal"],
+	["A. Have 100 kills", "B. Stole the blue buff", "C. Team gets first blood", "D. Destroy the enemy Nexus"]
 ];
 var answer = [
-	"D. Cassiopeia", "B. Sona", "A. Lulu", "C. Zhonyas Hourglass", "B. Sejuani", "D. Shaco", "A. Point Guard", "B. Riven"
+	"D. Cassiopeia", "B. Sona", "A. Lulu", "C. Zhonyas Hourglass", "B. Sejuani", "D. Shaco", "A. Point Guard", "B. Riven", "A. Smite", "D. Destroy the enemy Nexus"
 ];
 
 
