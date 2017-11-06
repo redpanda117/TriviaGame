@@ -54,3 +54,8 @@ button{
 h2,h3{
 	color:#ffffff;
 }
+
+.panel-title {
+	color: #ffffff;
+	border: 0;
+}
